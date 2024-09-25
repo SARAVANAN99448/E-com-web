@@ -7,7 +7,7 @@ const dotenv = require("dotenv").config()
 const app = express()
 
 const corsoptions = {
-    origin: 'https://e-com-web-ujbh.onrender.com/',
+    origin: ['https://e-com-web-ujbh.onrender.com/',, 'http://localhost:5173'],
     methods: ['GET', 'POST'],
     credentials: true
 };
