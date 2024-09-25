@@ -1,4 +1,4 @@
-import { useEffect, useState,useContext } from "react"
+import { useEffect, useState } from "react"
 import Navbar from "./Navbar"
 import search from "../../../public/images/search.png"
 import axios from "axios"
@@ -9,7 +9,7 @@ const Products = () => {
     const [product, setproduct] = useState([])
     const [isopen, setisopen] = useState(false)
     const [popupdetails, setpopupdetails] = useState('')
-    const URL = useContext(Cartcontext)
+    
     
     //for popup data like image,text
     const openmodel = (image,text) => {

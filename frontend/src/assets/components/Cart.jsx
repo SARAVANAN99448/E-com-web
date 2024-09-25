@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 const Cart = () => {
     const { cart, setcart } = useContext(Cartcontext)
-    const URL = useContext(Cartcontext)
+    
     // remove from cart
     const removefromcart = (item) => {
         axios.post(`${URL}/remove-from-cart`, {
