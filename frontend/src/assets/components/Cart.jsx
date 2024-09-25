@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 
+
 const Cart = () => {
     const { cart, setcart } = useContext(Cartcontext)
+    const URL = useContext(Cartcontext)
     // remove from cart
     const removefromcart = (item) => {
-        axios.post("http://localhost:5000/remove-from-cart", {
+        axios.post(`${URL}/remove-from-cart`, {
             productId: item._id
         })
             .then(() => {
@@ -23,7 +25,7 @@ const Cart = () => {
     };
 
     useEffect(() => {
-        axios.get("http://localhost:5000/cart")
+        axios.get(`${URL}/cart`)
             .then(response => {
                 setcart(response.data);
             })
