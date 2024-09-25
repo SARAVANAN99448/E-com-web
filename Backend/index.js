@@ -79,10 +79,7 @@ app.get("/cart", (req, res) => {
         .then(data => res.json(data))
         .catch(() => res.status(500).json({ error: "Failed to fetch cart" }));
 });
-// Catch-all route for React Router
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html')); // Adjust the path as needed
-});
+
 
 // backend server
 app.listen(5000, () => {
