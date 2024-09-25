@@ -41,7 +41,7 @@ const Products = () => {
     };
 
     useEffect(() => {
-        axios.post(`${URL}/products`).
+        axios.get(`${URL}/products`).
             then((data) => {
                 setproduct(data.data)
 
