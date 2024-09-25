@@ -9,7 +9,7 @@ const Products = () => {
     const [product, setproduct] = useState([])
     const [isopen, setisopen] = useState(false)
     const [popupdetails, setpopupdetails] = useState('')
-    const URL = import.meta.env.VITE_API_BACKEND
+    const URL = import.meta.env.VITE_API_BACKEND.replace(/\/+$/, "")
 
 
     //for popup data like image,text
