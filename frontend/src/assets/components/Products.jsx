@@ -16,7 +16,6 @@ const Products = () => {
     const openmodel = (image, text) => {
         setpopupdetails(image)
         setisopen(true)
-        setpopuptext(text)
     }
     // close the popup
     const closemodel = () => {
