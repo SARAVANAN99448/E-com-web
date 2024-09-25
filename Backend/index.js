@@ -14,6 +14,7 @@ const corsoptions = {
 // Middleware
 app.use(express.json())
 
+
 // path to show the images in frontend
 app.use(cors(corsoptions));
 app.use("/images", express.static(path.join(__dirname, "images")));
