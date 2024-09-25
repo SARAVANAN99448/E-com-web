@@ -45,7 +45,7 @@ const Cart = () => {
                     {cart.length > 0 ? (
                         cart.map((data, index) => (
                             <div key={index} className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
-                                <img src={`${URL}/images${data.image}`} alt={data.text}
+                                <img src={`${URL}/images/${data.image}`} alt={data.text}
                                     className="w-full h-64 object-cover mb-3" />
                                 <h2 className="text-lg font-semibold mb-2">{data.text}</h2>
                                 <p className="text-green-700 mb-3">{data.price}</p>
