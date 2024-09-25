@@ -10,10 +10,10 @@ const Products = () => {
     const [isopen, setisopen] = useState(false)
     const [popupdetails, setpopupdetails] = useState('')
     const URL = import.meta.env.VITE_API_BACKEND;
-    
-    
+
+
     //for popup data like image,text
-    const openmodel = (image,text) => {
+    const openmodel = (image, text) => {
         setpopupdetails(image)
         setisopen(true)
         setpopuptext(text)
@@ -44,10 +44,10 @@ const Products = () => {
         axios.get(`${URL}/products`).
             then((data) => {
                 setproduct(data.data)
-
             })
             .catch(() => { console.log("error") })
     }, [])
+
 
     // Search filter
     const filteredproducts = product.filter((data) =>
