@@ -37,7 +37,7 @@ const cartmodel = mongoose.model("cart", {
 }, "cart");
 
 // sending products data to frontend
-app.get("/products", function (req, res) {
+app.post("/products", function (req, res) {
     productmodel.find().then(function (data) {
         res.json(data)
         console.log(data)
