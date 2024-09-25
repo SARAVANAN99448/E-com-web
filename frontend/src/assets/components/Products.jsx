@@ -74,7 +74,7 @@ const Products = () => {
                     filteredproducts.map(function (data, index) {
                         return (<>
                             <div key={index} className="w-64 text-white border-2 rounded-md hover:border-black flex flex-col items-center text-center cursor-pointer hover:mt-2">
-                                <img onClick={() => openmodel(`images/${data.image}`)} src={`images/${data.image}`} alt={data.text} className="w-96 h-96 " />
+                                <img onClick={() => openmodel(`${URL}/${data.image}`)} src={`images/${data.image}`} alt={data.text} className="w-96 h-96 " />
                                 <h1 className="font-semibold mt-3 mb-2">{data.text}</h1>
                                 <p className="text-green-950">{data.price}</p>
                                 <button onClick={() => addtocart(data)} className="mb-2 mt-1 bg-orange-500 p-2 rounded-md">
