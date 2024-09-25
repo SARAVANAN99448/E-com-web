@@ -7,13 +7,12 @@ const dotenv = require("dotenv").config()
 const app = express()
 
 const corsoptions = {
-    origin: ['https://e-com-web-ujbh.onrender.com'],
+    origin: ['https://e-com-web-frontend.onrender.com'],
     methods: ['GET', 'POST'],
     credentials: true
 };
 // Middleware
 app.use(express.json())
-
 
 // path to show the images in frontend
 app.use(cors(corsoptions));
