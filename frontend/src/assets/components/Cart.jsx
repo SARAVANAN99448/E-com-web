@@ -35,6 +35,7 @@ const Cart = () => {
             });
     }, []);
 
+    const baseURL = "https://e-com-web-ujbh.onrender.com/images/"
 
     return (
         <><Navbar />
@@ -42,10 +43,11 @@ const Cart = () => {
                 <h1 className="text-2xl font-bold text-white mb-5 text-center">Cart Products</h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                    
                     {cart.length > 0 ? (
                         cart.map((data, index) => (
                             <div key={index} className="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
-                                <img src={`${URL}/images/${data.image}`} alt={data.text}
+                                <img src={`${baseURL}${data.image}`} alt={data.text}
                                     className="w-full h-64 object-cover mb-3" />
                                 <h2 className="text-lg font-semibold mb-2">{data.text}</h2>
                                 <p className="text-green-700 mb-3">{data.price}</p>
