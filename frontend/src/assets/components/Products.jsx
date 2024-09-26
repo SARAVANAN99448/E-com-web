@@ -43,6 +43,7 @@ const Products = () => {
         axios.get(`${URL}/products`).
             then((data) => {
                 setproduct(data.data)
+                console.log(`${URL}/images/${data.image}`);
             })
             .catch(() => { console.log("error") })
     }, [])
