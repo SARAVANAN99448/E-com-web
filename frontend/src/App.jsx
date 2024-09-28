@@ -15,8 +15,8 @@ const App = () => {
      <Cartprovider>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<><Navbar /><Hero /><About /></>}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/home" element={<><Navbar /><Hero /><About /></>}></Route>
+        <Route path="/" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/contact" element={<><Contact /><Footer /></>}></Route>
           <Route path="/products" element={<Products />}></Route>

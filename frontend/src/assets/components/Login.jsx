@@ -17,7 +17,7 @@ const Login = () => {
             // user already logged in this website, it will works
             if (user) {
                 console.log("logged In")
-                navigate("/")
+                navigate("/home")
             }
         })
 
@@ -31,7 +31,7 @@ const Login = () => {
     const send = (e) => {
         e.preventDefault()
         signInWithEmailAndPassword(auth, user, pass).then(() => {
-            navigate('/')
+            navigate('/home')
             console.log("login successfull")
         })
             .catch(() => { console.log("login failed") })

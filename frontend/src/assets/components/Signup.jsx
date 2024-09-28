@@ -31,7 +31,7 @@ const Signup = () => {
         createUserWithEmailAndPassword(auth, user, pass).then
             ((data) => {
                 console.log(data)
-                navigate("/login")
+                navigate("/")
             })
             .catch(() => { console.log("failed to signup") })
 
@@ -60,7 +60,7 @@ const Signup = () => {
                         type="password"
                         placeholder="Confirm Password" /><br /><br />
                     {error ? <p className="text-red-600 mb-2">Passwords do not match</p> : ""}
-                    <p>Already have an account ?<Link to={"/login"} className="underline">Login</Link></p>
+                    <p>Already have an account ?<Link to={"/"} className="underline">Login</Link></p>
                     <button
                         onClick={send}
                         className="bg-blue-400 text-black p-2 rounded-md mt-2"

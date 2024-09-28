@@ -37,7 +37,7 @@ const Navbar = () => {
                     <ul className="hidden md:flex justify-around gap-10 font-semibold">
                         <li><a href="/">Home</a></li>
                         <li><a href="/products">Products</a></li>
-                        <li><a href="#about">About</a></li>
+                        {/* <li><a href="#about">About</a></li> */}
                         <li><a href="/contact">Contact</a></li>
                         <li><a href="/cart">Cart</a></li>
                         {checkuser ? <li ><a className="cursor-pointer bg-orange-500 p-2 rounded-md" onClick={out}>Logout</a></li> :
