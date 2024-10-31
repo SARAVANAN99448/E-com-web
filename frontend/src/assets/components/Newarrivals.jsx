@@ -30,7 +30,7 @@ const Newarrivals = () => {
             </div>
             <div className="flex flex-wrap justify-center pt-20 gap-10 bg-pink-400">
                 {
-                    newitem.filter(function (data, index) {
+                    newitem.map(function (data, index) {
                         const imageUrl = `/images/${data.image}`;
                         <div key={index} className="w-64 text-white border-2 rounded-md hover:border-black flex flex-col items-center text-center cursor-pointer hover:mt-2">
                             <img onClick={() => openmodel(imageUrl)} src={imageUrl} alt={data.text} className="w-96 h-96" />
