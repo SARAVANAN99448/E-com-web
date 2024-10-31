@@ -38,6 +38,14 @@ app.get("/products", function (req, res) {
         console.log(data)
     })
 })
+// New arrivals
+
+app.get("/newarrivals",(req,res)=>{
+    productmodel.find().
+    then((data)=>res.json(data)).
+    catch(()=>console.log("No data"))
+
+})
 // Add to cart
 app.post("/add-to-cart", (req, res) => {
     const { id, image, text, price } = req.body;
@@ -74,14 +82,7 @@ app.get("/cart", (req, res) => {
         .then(data => res.json(data))
         .catch(() => res.status(500).json({ error: "Failed to fetch cart" }));
 });
-// New arrivals
 
-app.get("/newarrivals",(req,res)=>{
-    productmodel.find().
-    then((data)=>res.send(data)).
-    catch(()=>console.log("No data"))
-
-})
 
 // backend server
 app.listen(5000, () => {
