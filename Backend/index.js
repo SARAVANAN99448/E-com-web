@@ -6,17 +6,12 @@ const dotenv = require("dotenv").config()
 
 const app = express()
 
-const corsoptions = {
-    origin: ['https://e-com-web-frontend.onrender.com'],
-    methods: ['GET', 'POST'],
-    credentials: true
-};
+
 // Middleware
 app.use(express.json())
 
 // path to show the images in frontend
-app.use(cors(corsoptions));
-app.use("/images", express.static(path.join(__dirname, "images")));
+app.use(cors());
 
 mongoose.connect(process.env.VITE_API_URL).then(() => console.log("DB is connected"))
     .catch(() => console.log("Failed to connect DB"))

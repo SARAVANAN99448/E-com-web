@@ -42,7 +42,7 @@ const Products = () => {
         axios.get(`${URL}/products`).
             then((data) => {
                 setproduct(data.data)
-                console.log(`${URL}/images/${data.image}`);
+                console.log(`/images/${data.image}`);
             })
             .catch(() => { console.log("error") })
     }, [])
@@ -71,7 +71,7 @@ const Products = () => {
                 filteredproducts.length > 0 ? (
                     // Displaying products
                     filteredproducts.map(function (data, index) {
-                        const imageUrl = `${URL}/images/${data.image}`;
+                        const imageUrl = `/images/${data.image}`;
 
                        return (<>
                             <div key={index} className="w-64 text-white border-2 rounded-md hover:border-black flex flex-col items-center text-center cursor-pointer hover:mt-2">
