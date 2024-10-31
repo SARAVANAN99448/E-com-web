@@ -3,10 +3,10 @@ import Navbar from "./Navbar"
 const Contact = () => {
     return (<>
         <Navbar />
-        <section>
-            <h1 id="contact" className="text-4xl text-white font-bold bg-black text-center py-14 underline">Contact</h1>
-
-            <form className="bg-black text-white  font-hero-font px-10 md:px-44 pt-10   flex flex-col  pb-36" >
+        <section className="bg-pink-500 ">
+            <h1 id="contact" className="text-4xl text-white font-bold bg-pink-500 text-center py-14 underline">Contact</h1>
+            <hr />
+            <form className=" text-white  font-hero-font px-10 md:px-44 pt-10 text-xl   flex flex-col  pb-10" >
                 <span className="">Name : </span>
                 <input type="text" className=" md:w-full rounded-md text-black p-3 outline-none mt-3" required /><br />
                 <span>E-mail : </span>
