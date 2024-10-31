@@ -1,4 +1,3 @@
-import luffy from "../../../public/images/luffy.jpg"
 import { useTypewriter, Cursor } from "react-simple-typewriter"
 import { Link } from "react-router-dom"
 // Hero sectiom
@@ -16,7 +15,7 @@ const Hero = () => {
             <div className="flex flex-col justify-around py-20 bg-pink-400 text-white items-center ">
                 <div className="relative">
                     <div className=" flex justify-end py-5 relative ">
-                        <img src={luffy} alt="" className=" w-96  md:w-[2000px] px-10 rounded-3xl relative " />
+                        <img src={"/images/luffy.jpg"} alt="" className=" w-96  md:w-[2000px] px-10 rounded-3xl relative " />
                     </div>
                     <p className="mx-20 mt-5 mb-3 font-bold absolute top-64 left-14 text-4xl">"Become the King of Pirates with Epic One Piece Gear!
                         Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!"</p>
@@ -29,7 +28,7 @@ const Hero = () => {
         <section className="md:hidden">
             <div className="bg-pink-400 ">
                 <div className="flex justify-center pt-10 relative" >
-                    <img src={luffy} alt="" className="w-full" />
+                    <img src={"/images/luffy.jpg"} alt="" className="w-full" />
                 </div>
                 <p className="px-20 text-white absolute top-[180px] font-bold" style={{ fontSize: "10px" }}>"Become the King of Pirates with Epic One Piece Gear!
                     Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!"</p>

@@ -49,7 +49,7 @@ const Navbar = () => {
                             <ul className=" flex flex-col md:hidden justify-around gap-5 font-semibold mobile-nav">
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/products">Product</a></li>
-                                <li><a href="#about">About</a></li>
+                                {/* <li><a href="#about">About</a></li> */}
                                 <li><a href="/contact">contact</a></li>
                                 <li><a href="/cart">Cart</a></li>
                                 {checkuser ? <li ><a className="cursor-pointer bg-orange-500 p-2 rounded-md" onClick={out}>Logout</a></li> :

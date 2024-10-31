@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import Navbar from "./Navbar"
-import search from "../../../public/images/search.png"
 import axios from "axios"
 
 
@@ -64,7 +63,7 @@ const Products = () => {
                     value={items}
                     placeholder="Search"
                     className="p-2 w-96  outline-none" />
-                <img src={search} alt="" className="size-8 p-1" />
+                <img src={"/images/search.png"} alt="" className="size-8 p-1" />
             </div>
         </div>
         <div className="flex flex-wrap justify-center pt-20 gap-10 bg-pink-400">
