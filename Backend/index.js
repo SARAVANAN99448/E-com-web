@@ -11,7 +11,9 @@ const app = express()
 app.use(express.json())
 
 // path to show the images in frontend
-app.use(cors());
+app.use(cors({
+    origin: 'https://e-com-web-frontend.onrender.com'
+}));
 
 mongoose.connect(process.env.VITE_API_URL).then(() => console.log("DB is connected"))
     .catch(() => console.log("Failed to connect DB"))

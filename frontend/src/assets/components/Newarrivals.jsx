@@ -20,7 +20,7 @@ const Newarrivals = () => {
     useEffect(() => {
         axios.get(`${URL}/newarrivals`).
             then((data) => setnewitem(data.data)).
-            catch(() => console.log("error    "))
+            catch(() => console.log("error"))
     }, [])
     return (<>
         <section className="bg-pink-400 " >
