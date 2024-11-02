@@ -55,6 +55,7 @@ const Newarrivals = () => {
                 )}
             </div>
         </section>
+        <hr />
     </>)
 
 
