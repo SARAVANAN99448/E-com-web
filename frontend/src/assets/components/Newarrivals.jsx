@@ -25,7 +25,7 @@ const Newarrivals = () => {
     return (<>
         <section className="bg-pink-400 " >
             <div className="text-center pt-10">
-                <h1 className="text-4xl ">NEW ARRIVALS</h1>
+                <h1 className="text-4xl font-bold  ">NEW ARRIVALS</h1>
             </div>
             <div className="flex flex-wrap justify-center pt-20 gap-10 bg-pink-400">
                 {

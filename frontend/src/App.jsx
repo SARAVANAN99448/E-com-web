@@ -17,7 +17,7 @@ const App = () => {
      <Cartprovider>
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<><Navbar /><Hero /><About /><Newarrivals/><Topselling/></>}></Route>
+        <Route path="/home" element={<><Navbar /><Hero /><Newarrivals/><Topselling/><About /><Footer /></>}></Route>
         <Route path="/" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/contact" element={<><Contact /><Footer /></>}></Route>
