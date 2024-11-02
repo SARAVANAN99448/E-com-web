@@ -42,8 +42,7 @@ app.get("/products", function (req, res) {
 
 app.get("/newarrivals",(req,res)=>{
     productmodel.find().
-    then((data)=>res.json(data)).
-    catch(()=>console.log("No data"))
+    then((data)=>res.json(data))
 
 })
 // Add to cart
