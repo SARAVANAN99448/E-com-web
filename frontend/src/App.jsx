@@ -10,13 +10,14 @@ import About from "./assets/components/About"
 import { Cartprovider } from "./assets/components/Cartcontext"
 import Cart from "./assets/components/Cart"
 import Newarrivals from "./assets/components/Newarrivals"
+import Topselling from "./assets/components/Topselling"
 
 const App = () => {
   return (<>
      <Cartprovider>
     <BrowserRouter>
       <Routes>
-        <Route path="/home" element={<><Navbar /><Hero /><About /><Newarrivals/></>}></Route>
+        <Route path="/home" element={<><Navbar /><Hero /><About /><Newarrivals/><Topselling/></>}></Route>
         <Route path="/" element={<Login />}></Route>
         <Route path="/signup" element={<Signup />}></Route>
         <Route path="/contact" element={<><Contact /><Footer /></>}></Route>
