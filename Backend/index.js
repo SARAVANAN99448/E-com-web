@@ -47,6 +47,14 @@ app.get("/newarrivals", (req, res) => {
         then((data) => res.json(data))
 
 })
+
+// Topselling
+
+app.get("/topselling", (req, res) => {
+    productmodel.find().
+        then((data) => { res.json(data) })
+})
+
 // Add to cart
 app.post("/add-to-cart", (req, res) => {
     const { id, image, text, price } = req.body;
