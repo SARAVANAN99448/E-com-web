@@ -23,7 +23,7 @@ const Topselling = () => {
             catch(() => console.log("error"))
     }, [])
     return (<>
-        <section className="bg-pink-400 mb-10" >
+        <section className="bg-pink-400 pb-10" >
             <div className="text-center pt-10">
                 <h1 className="text-4xl font-bold">Topselling</h1>
             </div>
