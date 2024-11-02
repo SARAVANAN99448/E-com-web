@@ -40,9 +40,11 @@ app.get("/products", function (req, res) {
 })
 // New arrivals
 
-app.get("/newarrivals",(req,res)=>{
+app.get("/newarrivals", (req, res) => {
     productmodel.find().
-    then((data)=>res.json(data))
+        then((data) => res.json(data).
+            catch(() => console.log("error"))
+        )
 
 })
 // Add to cart
