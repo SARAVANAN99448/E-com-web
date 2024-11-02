@@ -23,11 +23,11 @@ const Newarrivals = () => {
             catch(() => console.log("error"))
     }, [])
     return (<>
-        <section >
-            <div>
-                <h1>NEW ARRIVALS</h1>
+        <section className="bg-pink-400 " >
+            <div className="text-center pt-10">
+                <h1 className="text-4xl ">NEW ARRIVALS</h1>
             </div>
-            <div className="flex flex-wrap justify-center pt-20 gap-10 bg-pink-400">
+            <div className="flex flex-wrap justify-center pt-20 gap-10 ">
                 {
                     newitem.slice(0, 4).map(function (data, index) {
                         const imageUrl = `/images/${data.image}`;
