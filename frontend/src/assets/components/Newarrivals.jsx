@@ -13,14 +13,14 @@ const Newarrivals = () => {
     }
     // close the popup
     const closemodel = () => {
-        setisopen(false)
+        setisopen(false) 
         setpopupdetails("")
     }
 
     useEffect(() => {
         axios.get(`${URL}/newarrivals`).
             then((data) => setnewitem(data.data)).
-            catch(() => console.log("error"))
+            catch(() => console.log("error    "))
     }, [])
     return (<>
         <section className="bg-pink-400 " >
