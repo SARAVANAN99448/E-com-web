@@ -23,9 +23,9 @@ const Newarrivals = () => {
             catch(() => console.log("error"))
     }, [])
     return (<>
-        <section className="bg-pink-400" >
-            <div>
-                <h1>NEW ARRIVALS</h1>
+        <section className="bg-pink-400 " >
+            <div className="text-center pt-10">
+                <h1 className="text-4xl ">NEW ARRIVALS</h1>
             </div>
             <div className="flex flex-wrap justify-center pt-20 gap-10 bg-pink-400">
                 {
