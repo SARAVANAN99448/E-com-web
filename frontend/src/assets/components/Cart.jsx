@@ -8,7 +8,7 @@ import Navbar from "./Navbar";
 const Cart = () => {
     const { cart, setcart } = useContext(Cartcontext)
     const URL = import.meta.env.VITE_API_BACKEND.replace(/\/+$/, "")
-    
+
     // remove from cart
     const removefromcart = (item) => {
         axios.post(`${URL}/remove-from-cart`, {
