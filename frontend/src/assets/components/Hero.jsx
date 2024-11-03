@@ -8,7 +8,7 @@ const Hero = () => {
             <div className="flex justify-center items-center md:w-1/2 relative">
                 <h1 className="text-4xl  text-main md:pb-0  pb-10">Become the King of Pirates with Epic One Piece Gear! Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!</h1>
             </div>
-            <div className="flex justify-center items-center md:pb-0  pb-10">
+            <div className="flex justify-center items-center md:pb-0  pb-5">
                 <img src="/images/hero.jpg" alt=""  className="w-96 h-96 md:rounded-full rounded-3xl"/>
             </div>
         </div>
@@ -17,7 +17,7 @@ const Hero = () => {
             <button  className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black"><Link to={"/products"}>Shop now</Link></button>
         </div>
         {/* btn for moblie */}
-        <div className=" absolute top-[125%] left-40 text-xl  md:hidden shop">
+        <div className=" text-xl  md:hidden shop flex justify-center pb-5">
             <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black w-40"><Link to={"/products"}>Shop now</Link></button>
         </div>
     </section>
