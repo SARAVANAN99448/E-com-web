@@ -1,43 +1,26 @@
-import { useTypewriter, Cursor } from "react-simple-typewriter"
-import { Link } from "react-router-dom"
-// Hero sectiom
+// Hero section
 const Hero = () => {
-    // const [text] = useTypewriter({
-    //     words :["Click on the products to view One Piece items"],
-    //     loop:{},
-    //     typeSpeed:20,
-    //     deleteSpeed:10,
 
-    // })
     return (<>
-        {/* desktop view */}
-        <section className="hidden md:block">
-            <div className="flex flex-col justify-around py-20 bg-pink-400 text-white items-center ">
-                <div className="relative">
-                    <div className=" flex justify-end py-5 relative ">
-                        <img src={"/images/luffy.jpg"} alt="" className=" w-96  md:w-[2000px] px-10 rounded-3xl relative " />
-                    </div>
-                    <p className="mx-20 mt-5 mb-3 font-bold absolute top-64 left-14 text-4xl">"Become the King of Pirates with Epic One Piece Gear!
-                        Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!"</p>
-
-                    <button className="absolute font-bold top-[80%] left-[650px] hover:bg-blue-800 bg-blue-600 p-2 rounded-md text-white"><Link to={"/products"}>Shop now</Link> </button>
-                </div>
+    <section className="bg-pink-400">
+        <div className="md:flex px-10 py-10 gap-10  justify-center ">
+            <div className="flex justify-center items-center md:w-1/2 relative">
+                <h1 className="text-4xl  text-main md:pb-0  pb-10">Become the King of Pirates with Epic One Piece Gear! Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!</h1>
             </div>
-        </section>
-        {/* mobile view */}
-        <section className="md:hidden">
-            <div className="bg-pink-400 ">
-                <div className="flex justify-center pt-10 relative" >
-                    <img src={"/images/luffy.jpg"} alt="" className="w-full" />
-                </div>
-                <p className="px-20 text-white absolute top-[180px] font-bold" style={{ fontSize: "10px" }}>"Become the King of Pirates with Epic One Piece Gear!
-                    Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!"</p>
-                <div className="flex justify-center ">
-                    <button style={{ fontSize: "10px" }} className="absolute  font-bold top-[240px] le hover:bg-blue-800 bg-blue-600 p-2 rounded-md text-white"><Link to={"/products"}>Show now</Link></button>
-
-                </div>
+            <div className="flex justify-center items-center md:pb-0  pb-10">
+                <img src="/images/hero.jpg" alt=""  className="w-96 h-96 rounded-full"/>
             </div>
-        </section>
+        </div>
+        {/* Btn for desktop */}
+        <div className=" absolute top-[60%] left-[30%] md:text-xl text-xs md:block hidden shop">
+            <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black">Shop now</button>
+        </div>
+        {/* btn for moblie */}
+        <div className=" absolute top-[107%] left-48 text-xl  md:hidden shop">
+            <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black w-40">Shop now</button>
+        </div>
+    </section>
+    <hr />
     </>)
 }
 export default Hero

@@ -26,7 +26,7 @@ const Login = () => {
         setuser(e.target.value)
 
     }
-  
+
 
     const send = (e) => {
         e.preventDefault()

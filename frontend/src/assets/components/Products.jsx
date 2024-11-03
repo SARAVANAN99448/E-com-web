@@ -55,7 +55,8 @@ const Products = () => {
 
     return (<>
         <Navbar />
-        <div className="bg-pink-400 pt-10 flex justify-center">
+        <section className="pb-10 bg-pink-400">
+        <div className="bg-pink-400 pt-10 flex justify-center ">
             <div className="text-center bg-white  flex justify-center items-center w-96 rounded-md p-1">
                 <input
                     type="text"
@@ -101,6 +102,7 @@ const Products = () => {
             )}
 
         </div>
+        </section>
     </>)
 }
 export default Products
