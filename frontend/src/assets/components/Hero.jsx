@@ -5,8 +5,8 @@ const Hero = () => {
     return (<>
     <section className="bg-pink-400">
         <div className="md:flex px-10 py-10 gap-10  justify-center ">
-            <div className="flex justify-center items-center md:w-1/2 relative">
-                <h1 className="text-4xl  text-main md:pb-0  pb-10">Become the King of Pirates with Epic One Piece Gear! Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!</h1>
+            <div className="flex md:justify-center md:items-center md:w-1/2 relative">
+                <h1 className="md:text-4xl text-2xl font-bold text-main md:pb-0  pb-10">Become the King of Pirates with Epic One Piece Gear! Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!</h1>
             </div>
             <div className="flex justify-center items-center md:pb-0  pb-5">
                 <img src="/images/hero.jpg" alt=""  className="w-96 h-96 md:rounded-full rounded-3xl"/>
