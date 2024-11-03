@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 // Hero section
 const Hero = () => {
 
@@ -13,11 +14,11 @@ const Hero = () => {
         </div>
         {/* Btn for desktop */}
         <div className=" absolute top-[60%] left-[30%] md:text-xl text-xs md:block hidden shop">
-            <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black">Shop now</button>
+            <button  className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black"><Link to={"/products"}>Shop now</Link></button>
         </div>
         {/* btn for moblie */}
         <div className=" absolute top-[107%] left-48 text-xl  md:hidden shop">
-            <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black w-40">Shop now</button>
+            <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black w-40"><Link to={"/products"}>Shop now</Link></button>
         </div>
     </section>
     <hr />
