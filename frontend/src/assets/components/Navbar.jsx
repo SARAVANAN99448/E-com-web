@@ -45,7 +45,7 @@ const Navbar = () => {
                     </ul>
                     {/* Navbar for mobile  */}
                     {menu &&
-                        <nav className="fixed md:hidden  bg-blue-800 w-1/2 h-[290px] left-0 pt-3 " style={{ top: "84px" }}>
+                        <nav className="fixed md:hidden  bg-pink-400 w-1/2 h-[290px] left-0 pt-3 z-30" style={{ top: "84px" }}>
                             <ul className=" flex flex-col md:hidden justify-around gap-5 font-semibold mobile-nav">
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/products">Product</a></li>
