@@ -9,15 +9,15 @@ const Hero = () => {
                 <h1 className="text-4xl  text-main md:pb-0  pb-10">Become the King of Pirates with Epic One Piece Gear! Discover treasures from the Grand Line. Shop exclusive One Piece merchandise now!</h1>
             </div>
             <div className="flex justify-center items-center md:pb-0  pb-10">
-                <img src="/images/hero.jpg" alt=""  className="w-96 h-96 rounded-full"/>
+                <img src="/images/hero.jpg" alt=""  className="w-96 h-96 md:rounded-full rounded-3xl"/>
             </div>
         </div>
         {/* Btn for desktop */}
-        <div className=" absolute top-[60%] left-[30%] md:text-xl text-xs md:block hidden shop">
+        <div className=" absolute top-[70%] left-[30%] md:text-xl text-xs md:block hidden shop">
             <button  className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black"><Link to={"/products"}>Shop now</Link></button>
         </div>
         {/* btn for moblie */}
-        <div className=" absolute top-[107%] left-48 text-xl  md:hidden shop">
+        <div className=" absolute top-[120%] left-36 text-xl  md:hidden shop">
             <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black w-40"><Link to={"/products"}>Shop now</Link></button>
         </div>
     </section>
