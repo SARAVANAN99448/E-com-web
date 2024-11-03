@@ -17,7 +17,7 @@ const Hero = () => {
             <button  className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black"><Link to={"/products"}>Shop now</Link></button>
         </div>
         {/* btn for moblie */}
-        <div className=" absolute top-[120%] left-36 text-xl  md:hidden shop">
+        <div className=" absolute top-[125%] left-40 text-xl  md:hidden shop">
             <button className="bg-[#0E6EA0] p-2 rounded-md text-white hover:bg-black w-40"><Link to={"/products"}>Shop now</Link></button>
         </div>
     </section>

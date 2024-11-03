@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    margin: 0;
+    padding: 0
+}
 .mobile-nav li {
     @apply w-full h-full text-center;
 
