@@ -22,11 +22,11 @@ const Navbar = () => {
     // signout
     const out = () => {
         signOut(auth).then(function () {
-            navigate("/login")
+            navigate("/")
         })
     }
     const login = () => {
-        navigate("/")
+        navigate("/signup")
     }
     return (<>
         <section>
