@@ -26,7 +26,7 @@ const Navbar = () => {
         })
     }
     const login = () => {
-        navigate("/login")
+        navigate("/")
     }
     return (<>
         <section>
