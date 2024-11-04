@@ -1,63 +1,73 @@
-import { useState, useEffect } from "react"
-import axios from "axios"
-const Topselling = () => {
-    const [Topselling, setTopselling] = useState([])
-    const [isopen, setisopen] = useState(false)
-    const [popupdetails, setpopupdetails] = useState('')
-    const URL = import.meta.env.VITE_API_BACKEND.replace(/\/+$/, "")
+import { useState } from "react"
+import auth from "./Config"
+import { createUserWithEmailAndPassword } from "firebase/auth"
+import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 
-    //for popup data like image,text
-    const openmodel = (image) => {
-        setpopupdetails(image)
-        setisopen(true)
-    }
-    // close the popup
-    const closemodel = () => {
-        setisopen(false)
-        setpopupdetails("")
+const Signup = () => {
+    const [user, setuser] = useState()
+    const [pass, setpass] = useState()
+    const [confirmpass, setconfirmpass] = useState()
+    const [error, seterror] = useState(false)
+    const [passerror, setpasserror] = useState(false)
+    const [usererror, setusererror] = useState(false)
+    const navigate = useNavigate()
+    const send = (e) => {
+        e.preventDefault();
+        // regex for user and password 
+        const passregex = /^.{6,}$/
+        const userregex = /^[a-zA-Z0-9]+@gmail\.com$/
+        if (!passregex.test(pass)) {
+            setpasserror(true)
+        }
+        if (!userregex.test(user)) {
+            setusererror(true)
+        }
+        // checking the password is matching
+        if (pass !== confirmpass) {
+            seterror(true)
+        }
+        // Creating user and password
+        createUserWithEmailAndPassword(auth, user, pass).then
+            ((data) => {
+                console.log(data)
+                navigate("/")
+            })
+            .catch(() => { console.log("failed to signup") })
+
     }
 
-    useEffect(() => {
-        axios.get(`${URL}/topselling`).
-            then((data) => setTopselling(data.data)).
-            catch(() => console.log("error"))
-    }, [])
     return (<>
-        <section className="bg-pink-400 pb-10" >
-            <div className="text-center pt-10">
-                <h1 className="text-4xl font-bold">Topselling</h1>
-            </div>
-            <div className="flex flex-wrap justify-center pt-20 gap-10 bg-pink-400">
-                {
-                    Topselling.slice(5, 9).map(function (data, index) {
-                        const imageUrl = `/images/${data.image}`;
-                        return (
-                            <div key={index} className="w-64 text-white border-2 rounded-md hover:border-black flex flex-col items-center text-center cursor-pointer hover:mt-2">
-                                <img onClick={() => openmodel(imageUrl)} src={imageUrl} alt={data.text} className="w-96 h-96" />
-                                <h1 className="font-semibold mt-3 mb-2">{data.text}</h1>
-                                <p className="text-green-950">{data.price}</p>
-                            </div>
-
-                        )
-                    })
-                }
-
-                {/* Close the Popup */}
-                {isopen && (
-                    <div className="modal-overlay" onClick={closemodel}>
-                        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                            <span className="close-btn" onClick={closemodel}>
-                                &times;
-                            </span>
-                            <img src={popupdetails} alt="Product" className="modal-image" />
-                        </div>
-                    </div>
-                )}
+        <section className="flex justify-center bg-stone-300  p-40 items-center">
+            <div className="bg-black w-80 rounded-lg ">
+                <h1 className="text-white text-3xl text-center pt-10">Signup</h1>
+                <form className="text-center text-white p-10">
+                    <input
+                        className="p-1 rounded-md outline-none text-black"
+                        onChange={(e) => { setuser(e.target.value) }}
+                        type="text"
+                        placeholder="E-mail" /><br /><br />
+                    {usererror ? <p className="text-red-500">email must contains @gmail.com at the end</p> : ""}
+                    <input
+                        className="p-1 rounded-md outline-none text-black"
+                        onChange={(e) => { setpass(e.target.value) }}
+                        type="password"
+                        placeholder="Password" /><br /><br />
+                    {passerror ? <p className="text-red-600">password must be atleast 6 characters</p> : ""}
+                    <input
+                        className="p-1 rounded-md outline-none text-black"
+                        onChange={(e) => { setconfirmpass(e.target.value) }}
+                        type="password"
+                        placeholder="Confirm Password" /><br /><br />
+                    {error ? <p className="text-red-600 mb-2">Passwords do not match</p> : ""}
+                    <p>Already have an account ?<Link to={"/"} className="underline">Login</Link></p>
+                    <button
+                        onClick={send}
+                        className="bg-blue-400 text-black p-2 rounded-md mt-2"
+                    >Signup</button>
+                </form>
             </div>
         </section>
-        <hr />
     </>)
-
-
 }
-export default Topselling
+export default Signup
